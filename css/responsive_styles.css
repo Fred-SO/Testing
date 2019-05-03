@@ -1,0 +1,426 @@
+/*=============== RESPONSIVE GENERAL LAYOUT ===============*/
+/* 6 plages de largeur de viewport : */
+/*    xxl(1200 et +) pour les desktops */
+/*    xl(1024 à 1199) pour les desktops basse résolution */
+/*    l(720 à 1023) pour les tablettes en mode paysage */
+/*    m(600 à 719) pour les tablettes en mode portait */
+/*    s(481 à 599) pour les smartphones en mode paysage */
+/*    xs(0 à 480) pour les smartphones en mode portrait */
+
+body
+{
+    margin: 0 auto;
+    position: relative;
+}
+
+/*--------------- Menu -----------------*/
+@media screen and (max-width: 480px) {
+	.main_menu
+	{
+		/* TO DO */
+	}
+}
+@media screen and (min-width: 481px) and (max-width: 599px) {
+	.main_menu
+	{
+		/* TO DO */
+	}	
+}
+@media screen and (min-width: 600px) and (max-width: 719px) {
+	.main_menu
+	{
+		/* TO DO */
+	}	
+}
+@media screen and (min-width: 720px) and (max-width: 1023px) {
+	.main_menu
+	{
+		/* TO DO */
+	}	
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+	.main_menu
+	{
+		/* TO DO */
+	}	
+}
+@media screen and (min-width: 1200px) {	
+	.main_menu
+	{
+		/* TO DO */
+	}
+}
+/*--------------- End Of Menu -----------------*/
+
+/*--------------- Header -----------------*/
+/* TO DO : Vérifier l'affichage de l'image dans le header pour les différentes résolutions */
+/* xs */
+@media screen and (max-width: 480px) {
+	.main_header
+	{
+		position:relative;
+		top:0px;
+		left:0px;
+		right:0px;
+		height:50px;
+		overflow:hidden;
+		z-index:0;
+	}
+	.headerImage600
+	{
+		display:block;
+		width:100%;
+		position:absolute;
+		top:0px;
+		left:0px;
+		z-index:100;
+	}	
+	.headerImage768
+	{
+		display:none;
+	}
+	.headerImage1920
+	{
+		display:none;
+	}
+}
+/* s, m, l */
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+ 	.main_header
+	{
+		position:relative;
+		top:0px;
+		left:0px;
+		right:0px;
+		height:100px;
+		padding:10px;
+		overflow:hidden;
+	}
+	.headerImage600
+	{
+		display:none;
+	}	
+	.headerImage768
+	{
+		display:block;
+		position:absolute;		
+		top:0px;
+		left:0px;
+		width:100%;
+		z-index:100;
+	}
+	.headerImage1920
+	{
+		display:none;
+	}
+}
+/* xl, xxl */
+@media screen and (min-width: 1024px) {
+	.main_header
+	{
+		position:fixed;	/* stay at top of the browser only for desktop*/
+		top:0px;
+		left:0px;
+		right:0px;
+		height:100px;
+		padding:10px;
+		z-index:1000000;
+		overflow:hidden;
+	}
+	.headerImage600
+	{
+		display:none;
+	}	
+	.headerImage768
+	{
+		display:none;
+	}
+	.headerImage1920
+	{
+		display:block;
+		position:absolute;		
+		top:0px;
+		left:0px;
+		width:100%;
+		z-index:100;
+	}
+}
+
+.main_header_content
+{
+	position:absolute;
+	z-index:1000;
+}
+/*--------------- End Of Header -----------------*/
+
+/*--------------- Main Content -----------------*/
+/* Clearfix (http://nicolasgallagher.com/micro-clearfix-hack/) */
+.main_content:before,
+.main_content:after {
+  content:"";
+  display:table;
+}
+.main_content:after {
+  clear:both;
+}
+.main_content {
+  zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+/* End of Clearfix */
+
+/* xs */
+@media screen and (max-width: 480px) {
+	.main_content
+	{
+		background-image:url(../images/content600.jpg);
+		/*background-image:url(../images/ScreenDimensions.png);*/
+		background-repeat:repeat-y;
+		background-position:center top;
+		/**/background-size:100% ;
+	}
+}
+/* s, m, l */
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+	.main_content
+	{
+		color:#000000;
+		background-color:#EEEEEE;
+		margin-left:2%;
+		width:96%;
+		background-image:url(../images/content768.jpg);
+		/*background-image:url(../images/ScreenDimensions.png);*/
+		background-repeat:repeat-y;
+		background-position:center top;
+		/**/background-size:100% ;
+	}
+}
+/* xl, xxl */
+@media screen and (min-width: 1024px) {	
+	.main_content
+	{
+		position:relative;
+		top:120px; /* header height (100) + header top padding (10) + header bottom padding (10)*/
+		color:#000000;
+		background-color:#EEEEEE;
+		margin-left:2%;
+		width:96%;
+		background-image:url(../images/content1920.jpg);
+		/*background-image:url(../images/ScreenDimensions.png);*/
+		background-repeat:repeat-y;
+		background-position:center top;
+		/**/background-size:100%;
+		z-index:100000;
+	}
+}
+/*--------------- End Of Main Content -----------------*/
+
+/*--------------- Footer -----------------*/
+/* xs */
+@media screen and (max-width: 480px) {
+	.main_footer
+	{
+		/* TO DO */
+	}
+}
+/* s, m, l */
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+	.main_footer
+	{
+		left:0px;
+		right:0px;
+		padding:2%;
+		color:#FFFFFF;
+		background-color:#555555;
+	}	
+}
+/* xl, xxl */
+@media screen and (min-width: 1024px) {	
+	.main_footer
+	{
+		position:relative;
+		top:120px; /* same shifting as the main_content div, due to the header height and padding) */
+		left:0px;
+		right:0px;
+		padding:2%;
+		color:#FFFFFF;
+		background-color:#555555;
+	}
+}
+/*--------------- End Of Footer -----------------*/
+/*=============== ENF OF RESPONSIVE GENERAL LAYOUT ===============*/
+
+/*=============== RESPONSIVE GRID ===============*/
+/* Responsive Grid */
+/*    Inspirée de https://codepen.io/juliangarnier/pen/rkdpA */
+/*    Etendu (TO DO !!!) à 6 plages de largeur de viewport :
+/*       xxl(1200 et +) pour les desktops */
+/*       xl(1024 à 1199) pour les desktops basse résolution */
+/*       l(720 à 1023) pour les tablettes en mode paysage */
+/*       m(600 à 719) pour les tablettes en mode portait */
+/*       s(481 à 599) pour les smartphones en mode paysage */
+/*       xs(0 à 480) pour les smartphones en mode portrait */
+/*    Etendu en ajoutant des modèles à 12 divisions et 3 divisions */
+/*        Inspiré de http://www.responsivegridsystem.com/calculator/ */
+/*        Largeurs calculées avec les espaces intercalaires suivants : */
+/*           12 divisions : 1% */
+/*           6 divisions : 2% */
+/*           3 divisions : 4% */
+/*    Adapté pour filtrer les classes commençant par 'rescol_' */
+/*    Adapté pour masquer les colonnes dans certaines résolutions ('_xsNone', '_mNone',..) */
+/*    Exemples de noms de classe d'une colonne responsive : rescol_xl09of12_m2of3_xs3of3, rescol_1st_xl09of12_m2of3_xs3of3*/
+
+[class^="rescol_"]{background-color: #000000; color: #FFFFFF; display: block; float:left;}
+[class^="rescol_"] [class^="rescol_"]{background-color: #333333; color: #FFFFFF;}
+[class^="rescol_"] [class^="rescol_"] [class^="rescol_"]{background-color: #FFFFFF; color: #000000;}
+
+/* xs */
+@media screen and (max-width: 480px) {
+	[class^="rescol_"][class*="_xs12of12"] { width: 100%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xs11of12"] { width: 91.58%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xs10of12"] { width: 83.16%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xs09of12"] { width: 74.75%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xs08of12"] { width: 66.33%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xs07of12"] { width: 57.91%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xs06of12"] { width: 49.5%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xs05of12"] { width: 41.08%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xs04of12"] { width: 32.66%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xs03of12"] { width: 24.25%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xs02of12"] { width: 15.83%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xs01of12"] { width: 7.416%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_1st_xs12of12"] { width: 100%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs11of12"] { width: 91.58%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs10of12"] { width: 83.16%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs09of12"] { width: 74.75%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs08of12"] { width: 66.33%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs07of12"] { width: 57.91%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs06of12"] { width: 49.5%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs05of12"] { width: 41.08%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs04of12"] { width: 32.66%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs03of12"] { width: 24.25%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs02of12"] { width: 15.83%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs01of12"] { width: 7.416%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	
+	[class^="rescol_"][class*="_xs6of6"] { width: 100%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_xs5of6"] { width: 83%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_xs4of6"] { width: 66%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_xs3of6"] { width: 49%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_xs2of6"] { width: 32%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_xs1of6"] { width: 15%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_1st_xs6of6"] { width: 100%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs5of6"] { width: 83%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs4of6"] { width: 66%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs3of6"] { width: 49%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs2of6"] { width: 32%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs1of6"] { width: 15%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	
+	[class^="rescol_"][class*="_xs3of3"] { width: 100%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:4%;}
+	[class^="rescol_"][class*="_xs2of3"] { width: 65.33%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:4%;}
+	[class^="rescol_"][class*="_xs1of3"] { width: 30.66%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:4%;}
+	[class^="rescol_"][class*="_1st_xs3of3"] { width: 100%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs2of3"] { width: 65.33%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xs1of3"] { width: 30.66%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:0%;clear: both;}
+
+	[class*="_xsNone"]{display: none;}
+}
+/* s, m, l */
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+	[class^="rescol_"][class*="_m12of12"] { width: 100%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_m11of12"] { width: 91.58%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_m10of12"] { width: 83.16%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_m09of12"] { width: 74.75%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_m08of12"] { width: 66.33%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_m07of12"] { width: 57.91%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_m06of12"] { width: 49.5%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_m05of12"] { width: 41.08%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_m04of12"] { width: 32.66%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_m03of12"] { width: 24.25%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_m02of12"] { width: 15.83%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_m01of12"] { width: 7.416%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_1st_m12of12"] { width: 100%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_1st_m11of12"] { width: 91.58%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m10of12"] { width: 83.16%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m09of12"] { width: 74.75%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m08of12"] { width: 66.33%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m07of12"] { width: 57.91%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m06of12"] { width: 49.5%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m05of12"] { width: 41.08%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m04of12"] { width: 32.66%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m03of12"] { width: 24.25%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m02of12"] { width: 15.83%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m01of12"] { width: 7.416%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	
+	[class^="rescol_"][class*="_m6of6"] { width: 100%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_m5of6"] { width: 83%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_m4of6"] { width: 66%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_m3of6"] { width: 49%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_m2of6"] { width: 32%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_m1of6"] { width: 15%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_1st_m6of6"] { width: 100%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m5of6"] { width: 83%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m4of6"] { width: 66%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m3of6"] { width: 49%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m2of6"] { width: 32%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m1of6"] { width: 15%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	
+	[class^="rescol_"][class*="_m3of3"] { width: 100%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:4%;}
+	[class^="rescol_"][class*="_m2of3"] { width: 65.33%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:4%;}
+	[class^="rescol_"][class*="_m1of3"] { width: 30.66%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:4%;}
+	[class^="rescol_"][class*="_1st_m3of3"] { width: 100%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m2of3"] { width: 65.33%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_m1of3"] { width: 30.66%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:0%;clear: both;}
+	
+	[class*="_mNone"]{display: none;}
+}
+/* xl, xxl */
+@media screen and (min-width: 1024px) {
+
+	[class^="rescol_"][class*="_xl12of12"] { width: 100%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xl11of12"] { width: 91.58%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xl10of12"] { width: 83.16%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xl09of12"] { width: 74.75%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xl08of12"] { width: 66.33%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xl07of12"] { width: 57.91%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xl06of12"] { width: 49.5%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xl05of12"] { width: 41.08%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xl04of12"] { width: 32.66%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xl03of12"] { width: 24.25%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xl02of12"] { width: 15.83%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_xl01of12"] { width: 7.416%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:1%;}
+	[class^="rescol_"][class*="_1st_xl12of12"] { width: 100%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl11of12"] { width: 91.58%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl10of12"] { width: 83.16%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl09of12"] { width: 74.75%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl08of12"] { width: 66.33%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl07of12"] { width: 57.91%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl06of12"] { width: 49.5%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl05of12"] { width: 41.08%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl04of12"] { width: 32.66%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl03of12"] { width: 24.25%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl02of12"] { width: 15.83%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl01of12"] { width: 7.416%; margin-top: 1%; margin-bottom:1%; margin-right:0%; margin-left:0%;clear: both;}
+	
+	[class^="rescol_"][class*="_xl6of6"] { width: 100%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_xl5of6"] { width: 83%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_xl4of6"] { width: 66%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_xl3of6"] { width: 49%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_xl2of6"] { width: 32%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_xl1of6"] { width: 15%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:2%;}
+	[class^="rescol_"][class*="_1st_xl6of6"] { width: 100%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl5of6"] { width: 83%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl4of6"] { width: 66%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl3of6"] { width: 49%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl2of6"] { width: 32%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl1of6"] { width: 15%; margin-top: 2%; margin-bottom:2%; margin-right:0%; margin-left:0%;clear: both;}
+	
+	[class^="rescol_"][class*="_xl3of3"] { width: 100%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:4%;}
+	[class^="rescol_"][class*="_xl2of3"] { width: 65.33%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:4%;}
+	[class^="rescol_"][class*="_xl1of3"] { width: 30.66%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:4%;}
+	[class^="rescol_"][class*="_1st_xl3of3"] { width: 100%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl2of3"] { width: 65.33%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:0%;clear: both;}
+	[class^="rescol_"][class*="_1st_xl1of3"] { width: 30.66%; margin-top: 4%; margin-bottom:4%; margin-right:0%; margin-left:0%;clear: both;}
+
+	[class*="_xlNone"]{display: none;}
+}
+/*=============== END OF RESPONSIVE GRID ===============*/
+
+
